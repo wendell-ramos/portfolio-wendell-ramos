@@ -98,32 +98,6 @@ portfolio-wendell-ramos/
 └── README.md
 ```
 
-## Executando localmente
-
-Clone o repositório:
-
-```bash
-git clone https://github.com/wendell-ramos/portfolio-wendell-ramos.git
-```
-
-Entre na pasta:
-
-```bash
-cd portfolio-wendell-ramos
-```
-
-Como o projeto é estático, você pode abrir o arquivo `index.html` diretamente ou iniciar um servidor local:
-
-```bash
-python -m http.server 8765
-```
-
-Depois, acesse:
-
-```text
-http://localhost:8765
-```
-
 ## Responsividade
 
 A interface foi adaptada para diferentes dimensões:
