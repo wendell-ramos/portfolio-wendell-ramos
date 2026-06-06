@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfólio interativo de Wendell Ramos em formato de desktop retrô.">
+  <title>Wendell Ramos | Portfólio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="boot-screen" id="boot-screen" aria-hidden="true">
+    <div class="boot-logo">WR<span>PORTFÓLIO</span></div>
+    <p>Carregando portfólio de Wendell Ramos...</p>
+    <div class="boot-progress"><span></span></div>
+  </div>
+
+  <main class="desktop" id="desktop">
+    <div class="desktop-brand" aria-hidden="true">
+      <span>WR</span>
+      <p>WENDELL RAMOS<br>PORTFÓLIO</p>
+    </div>
+
+    <section class="desktop-icons" aria-label="Atalhos da área de trabalho">
+      <button class="desktop-icon" data-open="about" type="button">
+        <span class="icon-art computer-icon" aria-hidden="true"></span>
+        <span>Sobre mim</span>
+      </button>
+      <button class="desktop-icon" data-open="projects" type="button">
+        <span class="icon-art folder-icon" aria-hidden="true"></span>
+        <span>Meus projetos</span>
+      </button>
+      <button class="desktop-icon" data-open="events" type="button">
+        <span class="icon-art calendar-icon" aria-hidden="true"></span>
+        <span>Eventos</span>
+      </button>
+      <button class="desktop-icon" data-open="skills" type="button">
+        <span class="icon-art disk-icon" aria-hidden="true"></span>
+        <span>Habilidades</span>
+      </button>
+      <button class="desktop-icon" data-open="contact" type="button">
+        <span class="icon-art mail-icon" aria-hidden="true"></span>
+        <span>Contato</span>
+      </button>
+      <button class="desktop-icon" data-open="resume" type="button">
+        <span class="icon-art resume-icon" aria-hidden="true"></span>
+        <span>Currículo.pdf</span>
+      </button>
+      <button class="desktop-icon" data-open="readme" type="button">
+        <span class="icon-art text-icon" aria-hidden="true"></span>
+        <span>LEIA-ME.txt</span>
+      </button>
+    </section>
+
+    <section class="window welcome-window is-open" data-window="welcome" aria-label="Janela de boas-vindas">
+      <header class="window-titlebar">
+        <div class="window-title">
+          <span class="mini-icon">WR</span>
+          <span>Bem-vindo ao meu portfólio</span>
+        </div>
+        <div class="window-controls">
+          <button data-action="minimize" aria-label="Minimizar">_</button>
+          <button data-action="maximize" aria-label="Maximizar">□</button>
+          <button data-action="close" aria-label="Fechar">×</button>
+        </div>
+      </header>
+      <div class="window-menu" aria-hidden="true">
+        <span>Arquivo</span><span>Editar</span><span>Exibir</span><span>Ajuda</span>
+      </div>
+      <div class="window-content welcome-content">
+        <div class="welcome-copy">
+          <p class="eyebrow">Olá, mundo.</p>
+          <h1>Eu sou <strong>Wendell Ramos</strong>,<br>desenvolvedor de sistemas.</h1>
+          <p>Crio sistemas web, aplicações e automações para transformar processos em soluções eficientes e organizadas.</p>
+          <div class="welcome-actions">
+            <button class="retro-button primary" data-open="projects" type="button">Explorar projetos</button>
+            <button class="retro-button" data-open="resume" type="button">Ver currículo</button>
+            <button class="retro-button" data-open="contact" type="button">Falar comigo</button>
+          </div>
+        </div>
+        <div class="terminal-card" aria-label="Terminal com apresentação">
+          <div class="terminal-top"><span></span><span></span><span></span></div>
+          <div class="terminal-body">
+            <p><span class="terminal-user">wendell-ramos@portfolio</span>:<span class="terminal-path">~</span>$ whoami</p>
+            <p class="terminal-answer">Estudante de Sistemas de Informação e desenvolvedor focado em sistemas, web e automação.</p>
+            <p><span class="terminal-user">wendell-ramos@portfolio</span>:<span class="terminal-path">~</span>$ <span class="cursor"></span></p>
+          </div>
+        </div>
+      </div>
+      <footer class="window-status">7 objetos | Clique nos atalhos para explorar</footer>
+    </section>
+
+    <section class="window content-window" data-window="about" aria-label="Sobre mim">
+      <header class="window-titlebar">
+        <div class="window-title"><span class="mini-icon">i</span><span>Sobre mim</span></div>
+        <div class="window-controls">
+          <button data-action="minimize" aria-label="Minimizar">_</button>
+          <button data-action="maximize" aria-label="Maximizar">□</button>
+          <button data-action="close" aria-label="Fechar">×</button>
+        </div>
+      </header>
+      <div class="window-content about-content">
+        <aside class="profile-panel">
+          <div class="pixel-avatar">
+            <img src="assets/wendell-perfil.png" alt="Foto de Wendell Ramos">
+          </div>
+          <div>
+            <strong>Wendell Ramos</strong>
+            <small>Desenvolvedor de Sistemas</small>
+            <small>Sistemas de Informação | Toledo Prudente</small>
+          </div>
+        </aside>
+        <article>
+          <p class="eyebrow">C:\USERS\WENDELL\SOBRE</p>
+          <h2>Tecnologia aplicada a problemas reais.</h2>
+          <p>Curso Sistemas de Informação na Toledo Prudente Centro Universitário e busco atuar com desenvolvimento de sistemas, programação e automação de processos. Tenho experiência prática na criação de automações e na melhoria de rotinas com programação, Excel e outras ferramentas tecnológicas.</p>
+          <div class="info-grid">
+            <div><span>Localização</span><strong>Presidente Prudente - SP</strong></div>
+            <div><span>Status</span><strong class="status-online">Disponível</strong></div>
+            <div><span>Formação</span><strong>Sistemas de Informação - 5º termo</strong></div>
+            <div><span>Instituição de ensino</span><strong>Toledo Prudente Centro Universitário</strong></div>
+            <div><span>Idade</span><strong><span id="current-age">20</span> anos</strong></div>
+            <div><span>Idiomas</span><strong>Português nativo / Inglês intermediário</strong></div>
+          </div>
+          <div class="experience-note">
+            <span>EXPERIÊNCIA RECENTE</span>
+            <strong>Estagiário - Magalhães e Grangeiro LTDA</strong>
+            <div class="experience-period">Período: <time datetime="2025-05-27">27/05/2025</time> - <time datetime="2026-03-18">18/03/2026</time></div>
+            <p>Automação de sistemas, cálculos e processos, aplicando programação, Excel e conhecimentos acadêmicos às rotinas da empresa.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="window content-window projects-window" data-window="projects" aria-label="Meus projetos">
+      <header class="window-titlebar">
+        <div class="window-title"><span class="mini-icon">▰</span><span>Explorador de projetos</span></div>
+        <div class="window-controls">
+          <button data-action="minimize" aria-label="Minimizar">_</button>
+          <button data-action="maximize" aria-label="Maximizar">□</button>
+          <button data-action="close" aria-label="Fechar">×</button>
+        </div>
+      </header>
+      <div class="address-bar"><span>Endereço</span><div>Wendell Ramos \ Portfólio \ Projetos</div></div>
+      <div class="window-content projects-content">
+        <article class="project-card">
+          <div class="project-preview preview-one" aria-hidden="true">
+            <div class="cover-window cover-pericia">
+              <span class="cover-app-icon">▥</span>
+              <strong>Perícia Contábil</strong>
+              <div class="cover-field"></div>
+              <div class="cover-field"></div>
+              <div class="cover-button">Entrar</div>
+            </div>
+            <span class="cover-number">01</span>
+          </div>
+          <div class="project-info">
+            <span class="project-type">SISTEMA WEB</span>
+            <h3>Perícia Contábil</h3>
+            <p>Gestão de atividades de perícia contábil com autenticação, permissões, tarefas e fluxo de análise.</p>
+            <div class="tags"><span>C#</span><span>ASP.NET MVC</span><span>PostgreSQL</span><span>Azure</span></div>
+            <a href="https://projetopericiawendell-akdfcebzetfzdefz.brazilsouth-01.azurewebsites.net/Usuario/Login" target="_blank" rel="noreferrer" aria-label="Abrir Sistema Perícia Contábil">Abrir na Azure ↗</a>
+          </div>
+        </article>
+        <article class="project-card">
+          <div class="project-preview preview-two" aria-hidden="true">
+            <div class="cover-window cover-fincontrol">
+              <span class="cover-app-icon">↗</span>
+              <small>CONTROLE FINANCEIRO</small>
+              <strong>FinControl</strong>
+              <div class="cover-chart">
+                <i></i><i></i><i></i><i></i>
+              </div>
+            </div>
+            <span class="cover-number">02</span>
+          </div>
+          <div class="project-info">
+            <span class="project-type">SISTEMA WEB</span>
+            <h3>FinControl</h3>
+            <p>Controle financeiro pessoal com dashboard, receitas, despesas, metas e categorização de transações.</p>
+            <div class="tags"><span>Node.js</span><span>PostgreSQL</span><span>Supabase</span><span>Azure</span></div>
+            <a href="https://fincontrol-wendell-fgdjdzd5esd2d4fq.brazilsouth-01.azurewebsites.net/" target="_blank" rel="noreferrer" aria-label="Abrir FinControl">Abrir na Azure ↗</a>
+          </div>
+        </article>
+        <article class="project-card">
+          <div class="project-preview preview-three" aria-hidden="true">
+            <div class="cover-desktop-window">
+              <div class="cover-titlebar">
+                <span>Login - Gerenciamento Escolar</span>
+                <b>×</b>
+              </div>
+              <div class="cover-school">
+                <strong>Login</strong>
+                <small>Email:</small>
+                <div class="school-field"></div>
+                <small>Senha:</small>
+                <div class="school-field"></div>
+                <div class="school-button">Entrar</div>
+              </div>
+            </div>
+            <span class="cover-number">03</span>
+          </div>
+          <div class="project-info">
+            <span class="project-type">APLICAÇÃO DESKTOP</span>
+            <h3>Sistema Escolar</h3>
+            <p>Cadastro de alunos e professores, lançamento e visualização de notas com integração ao banco de dados.</p>
+            <div class="tags"><span>C#</span><span>WPF</span><span>SQL Server</span></div>
+            <a href="https://github.com/wendell-ramos/GerenciadorEscolar" target="_blank" rel="noreferrer" aria-label="Abrir Gerenciador Escolar no GitHub">Ver no GitHub ↗</a>
+          </div>
+        </article>
+      </div>
+      <footer class="window-status">3 projetos encontrados</footer>
+    </section>
+
+    <section class="window content-window" data-window="skills" aria-label="Habilidades">
+      <header class="window-titlebar">
+        <div class="window-title"><span class="mini-icon">◆</span><span>Propriedades do sistema</span></div>
+        <div class="window-controls">
+          <button data-action="minimize" aria-label="Minimizar">_</button>
+          <button data-action="maximize" aria-label="Maximizar">□</button>
+          <button data-action="close" aria-label="Fechar">×</button>
+        </div>
+      </header>
+      <div class="window-content skills-content">
+        <p class="eyebrow">COMPETÊNCIAS INSTALADAS</p>
+        <h2>Minha caixa de ferramentas</h2>
+        <div class="skill-groups">
+          <div class="skill-group">
+            <h3>Front-end</h3>
+            <div class="skill-list"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Node.js</span></div>
+          </div>
+          <div class="skill-group">
+            <h3>Back-end</h3>
+            <div class="skill-list"><span>C e C#</span><span>Python</span><span>ASP.NET MVC</span><span>WPF / Entity Framework</span></div>
+          </div>
+          <div class="skill-group">
+            <h3>Ferramentas</h3>
+            <div class="skill-list"><span>SQL Server / PostgreSQL</span><span>Git e GitHub</span><span>Azure / Supabase</span><span>Excel e VBA</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="window content-window contact-window" data-window="contact" aria-label="Contato">
+      <header class="window-titlebar">
+        <div class="window-title"><span class="mini-icon">@</span><span>Nova mensagem</span></div>
+        <div class="window-controls">
+          <button data-action="minimize" aria-label="Minimizar">_</button>
+          <button data-action="maximize" aria-label="Maximizar">□</button>
+          <button data-action="close" aria-label="Fechar">×</button>
+        </div>
+      </header>
+      <div class="window-content contact-content">
+        <div>
+          <p class="eyebrow">CONEXÃO ABERTA</p>
+          <h2>Vamos criar alguma coisa juntos?</h2>
+          <p>Estou aberto a oportunidades, projetos e boas conversas sobre tecnologia.</p>
+        </div>
+        <div class="contact-links">
+          <a href="mailto:wendellnascimentoramos@gmail.com">
+            <span class="contact-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M3 5h18v14H3zM4 6l8 7 8-7"/></svg>
+            </span>
+            <div><small>E-mail</small><strong>wendellnascimentoramos@gmail.com</strong></div><b>↗</b>
+          </a>
+          <a href="https://wa.me/5518998132838?text=Ol%C3%A1%2C%20Wendell!%20Vi%20seu%20portf%C3%B3lio%20e%20gostaria%20de%20conversar." target="_blank" rel="noreferrer">
+            <span class="contact-icon whatsapp-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M20 11.5a8 8 0 0 1-11.8 7L4 20l1.4-4.1A8 8 0 1 1 20 11.5z"/><path d="M9 8.5c.6 2.4 2.1 4 4.5 4.8l1-1 2 1.3c-.4 1.5-1.5 2.2-3 1.9-3.4-.7-5.8-3.1-6.6-6.4-.2-1 .5-2 1.6-2.5z"/></svg>
+            </span>
+            <div><small>WhatsApp</small><strong>(18) 99813-2838</strong></div><b>↗</b>
+          </a>
+          <a href="https://www.linkedin.com/in/wendellramos10/" target="_blank" rel="noreferrer">
+            <span class="contact-icon linkedin-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M5 9v10M5 5.5v.1M10 19V9m0 4.3c.8-2.9 7-3.2 7 1.2V19M10 9v3"/></svg>
+            </span>
+            <div><small>LinkedIn</small><strong>/in/wendellramos10</strong></div><b>↗</b>
+          </a>
+          <a href="https://github.com/wendell-ramos" target="_blank" rel="noreferrer">
+            <span class="contact-icon github-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M9 19c-4 1.2-4-2-5-2.5M14.5 21v-3.2c0-.9.3-1.6.8-2-3 .3-6.1-1.5-6.1-6.5 0-1.4.5-2.6 1.3-3.5-.1-.3-.6-1.7.1-3.5 0 0 1.1-.4 3.6 1.3a12 12 0 0 1 6.6 0c2.5-1.7 3.6-1.3 3.6-1.3.7 1.8.2 3.2.1 3.5.8.9 1.3 2.1 1.3 3.5 0 5-3.1 6.8-6.1 6.5.5.4.8 1.3.8 2.5V21"/></svg>
+            </span>
+            <div><small>GitHub</small><strong>@wendell-ramos</strong></div><b>↗</b>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="window events-window" data-window="events" aria-label="Linha do tempo de eventos">
+      <header class="window-titlebar">
+        <div class="window-title"><span class="mini-icon">EV</span><span>Linha do tempo - Eventos</span></div>
+        <div class="window-controls">
+          <button data-action="minimize" aria-label="Minimizar">_</button>
+          <button data-action="maximize" aria-label="Maximizar">□</button>
+          <button data-action="close" aria-label="Fechar">×</button>
+        </div>
+      </header>
+      <div class="address-bar"><span>Endereço</span><div>Wendell Ramos \ Portfólio \ Eventos</div></div>
+      <div class="window-content events-content">
+        <header class="events-heading">
+          <p class="eyebrow">EXPERIÊNCIAS E PARTICIPAÇÕES</p>
+          <h2>Linha do tempo</h2>
+          <p>Eventos, workshops e experiências que contribuíram para minha formação profissional.</p>
+        </header>
+
+        <div class="timeline">
+          <article class="timeline-item">
+            <div class="timeline-marker" aria-hidden="true"></div>
+            <div class="timeline-date">
+              <time datetime="2026-05-16">16 MAI 2026</time>
+              <span>Mais recente</span>
+            </div>
+            <div class="timeline-card">
+              <figure class="timeline-photo" tabindex="0" role="button" aria-label="Ampliar foto do Hackathon">
+                <img src="assets/evento-hackathon-fatec-2026.jpeg" alt="Wendell Ramos e sua equipe no 1º Hackathon da Empresa Júnior Fatec Presidente Prudente">
+              </figure>
+              <div class="timeline-copy">
+                <span class="event-type">HACKATHON</span>
+                <h3>1º Hackathon da Empresa Júnior Fatec Presidente Prudente</h3>
+                <p>Participação no 1º Hackathon da Empresa Júnior Fatec Presidente Prudente, com foco em Negócios de Impacto com Soluções Tecnológicas. Desenvolvimento de solução em equipe, aplicando conhecimentos de tecnologia, inovação, resolução de problemas e trabalho colaborativo sob pressão.</p>
+                <div class="event-tags">
+                  <span>Tecnologia</span>
+                  <span>Inovação</span>
+                  <span>Trabalho em equipe</span>
+                  <span>Resolução de problemas</span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="timeline-item timeline-item-gdg">
+            <div class="timeline-marker" aria-hidden="true"></div>
+            <div class="timeline-date">
+              <time datetime="2026-05-14">14 MAI 2026</time>
+            </div>
+            <div class="timeline-card">
+              <figure class="timeline-photo" tabindex="0" role="button" aria-label="Ampliar foto do GDG Lightning Talks">
+                <img src="assets/evento-gdg-lightning-talks-2026.jpeg" alt="Palestra do 1º GDG Lightning Talks no campus da Unoeste">
+              </figure>
+              <div class="timeline-copy">
+                <span class="event-type">PALESTRAS</span>
+                <h3>1º GDG Lightning Talks</h3>
+                <p>Participação no 1º GDG Lightning Talks, realizado no campus da Unoeste, acompanhando palestras rápidas sobre Data Pipelines, Digital Forensics, Flutter e Large Language Models (LLMs). O evento proporcionou contato com diferentes áreas da tecnologia, práticas do mercado e novas perspectivas sobre engenharia de dados, investigação digital, desenvolvimento multiplataforma e inteligência artificial.</p>
+                <div class="event-tags">
+                  <span>Data Pipelines</span>
+                  <span>Digital Forensics</span>
+                  <span>Flutter</span>
+                  <span>LLMs</span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="timeline-item timeline-item-ai">
+            <div class="timeline-marker" aria-hidden="true"></div>
+            <div class="timeline-date">
+              <time datetime="2026-04-15">15 ABR 2026</time>
+            </div>
+            <div class="timeline-card">
+              <figure class="timeline-photo" tabindex="0" role="button" aria-label="Ampliar foto do workshop AI First">
+                <img src="assets/evento-ai-first-toledo-2026.jpeg" alt="Palestra sobre a abordagem AI First na Jornada Acadêmica de Tecnologia da Toledo Prudente">
+              </figure>
+              <div class="timeline-copy">
+                <span class="event-type">WORKSHOP</span>
+                <h3>Jornada Acadêmica de Tecnologia - Abordagem AI First</h3>
+                <p>Participação em palestra da Jornada Acadêmica de Tecnologia, realizada na Toledo Prudente, sobre a abordagem AI First. O encontro apresentou reflexões sobre como a inteligência artificial pode ser considerada desde o início no desenvolvimento de produtos, serviços e processos, ampliando possibilidades de inovação, automação e solução de problemas no mercado de tecnologia.</p>
+                <div class="event-tags">
+                  <span>AI First</span>
+                  <span>Inteligência Artificial</span>
+                  <span>Inovação</span>
+                  <span>Automação</span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="timeline-item timeline-item-cobmais">
+            <div class="timeline-marker" aria-hidden="true"></div>
+            <div class="timeline-date">
+              <time datetime="2024-10-16">16 OUT 2024</time>
+            </div>
+            <div class="timeline-card">
+              <figure class="timeline-photo" tabindex="0" role="button" aria-label="Ampliar foto da visita técnica à Cobmais">
+                <img src="assets/evento-visita-cobmais-2024.jpeg" alt="Ambiente de trabalho conhecido durante visita técnica à empresa Cobmais">
+              </figure>
+              <div class="timeline-copy">
+                <span class="event-type">VISITA TÉCNICA</span>
+                <h3>Visita Técnica à Cobmais</h3>
+                <p>Participação em visita técnica à empresa Cobmais, conhecendo seu ambiente corporativo, processos internos e dinâmica de funcionamento. A experiência permitiu observar de perto a organização das equipes, o uso da tecnologia nas rotinas profissionais e a integração entre pessoas, processos e ferramentas para alcançar melhores resultados.</p>
+                <div class="event-tags">
+                  <span>Ambiente corporativo</span>
+                  <span>Processos internos</span>
+                  <span>Tecnologia</span>
+                  <span>Organização</span>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+      <footer class="window-status">4 eventos registrados | Ordem: mais recente primeiro</footer>
+    </section>
+
+    <section class="window resume-window" data-window="resume" aria-label="Currículo de Wendell Ramos">
+      <header class="window-titlebar">
+        <div class="window-title"><span class="mini-icon">PDF</span><span>Currículo - Wendell Ramos.pdf</span></div>
+        <div class="window-controls">
+          <button data-action="minimize" aria-label="Minimizar">_</button>
+          <button data-action="maximize" aria-label="Maximizar">□</button>
+          <button data-action="close" aria-label="Fechar">×</button>
+        </div>
+      </header>
+      <div class="resume-toolbar">
+        <a class="retro-button primary" href="assets/curriculo-wendell-ramos.pdf" target="_blank" rel="noreferrer">Abrir em nova guia</a>
+        <a class="retro-button" href="assets/curriculo-wendell-ramos.pdf" download="Curriculo-Wendell-Ramos.pdf">Baixar currículo</a>
+      </div>
+      <div class="resume-viewer">
+        <iframe src="assets/curriculo-wendell-ramos.pdf#view=FitH" title="Visualização do currículo de Wendell Ramos"></iframe>
+        <p>Seu navegador não exibiu o PDF. <a href="assets/curriculo-wendell-ramos.pdf" target="_blank">Abra o currículo aqui.</a></p>
+      </div>
+      <footer class="window-status">Currículo profissional | PDF</footer>
+    </section>
+
+    <section class="window notepad-window" data-window="readme" aria-label="Leia-me">
+      <header class="window-titlebar">
+        <div class="window-title"><span class="mini-icon">▤</span><span>LEIA-ME.txt - Bloco de notas</span></div>
+        <div class="window-controls">
+          <button data-action="minimize" aria-label="Minimizar">_</button>
+          <button data-action="maximize" aria-label="Maximizar">□</button>
+          <button data-action="close" aria-label="Fechar">×</button>
+        </div>
+      </header>
+      <div class="window-menu" aria-hidden="true"><span>Arquivo</span><span>Editar</span><span>Pesquisar</span><span>Ajuda</span></div>
+      <div class="notepad-text">
+        <p>WENDELL RAMOS - PORTFÓLIO PESSOAL</p>
+        <p>====================================</p>
+        <p>Bem-vindo!</p>
+        <p>Este site foi pensado como um pequeno sistema operacional. Explore os ícones, abra janelas e conheça um pouco do meu trabalho.</p>
+        <p>DICA: As janelas podem ser arrastadas, minimizadas e maximizadas.</p>
+        <p>Versão: 1.0.0<br>Última atualização: 2026</p>
+      </div>
+    </section>
+
+    <nav class="start-menu" id="start-menu" aria-label="Menu iniciar">
+      <div class="start-menu-side">WENDELL RAMOS <strong>PORTFÓLIO</strong></div>
+      <div class="start-menu-items">
+        <div class="start-profile">
+          <span>WR</span>
+          <div><strong>Wendell Ramos</strong><small>Desenvolvedor de Sistemas</small></div>
+        </div>
+        <button data-open="about" type="button"><span>◉</span> Sobre mim</button>
+        <button data-open="projects" type="button"><span>▰</span> Projetos</button>
+        <button data-open="events" type="button"><span>16</span> Eventos</button>
+        <button data-open="skills" type="button"><span>◆</span> Habilidades</button>
+        <button data-open="contact" type="button"><span>@</span> Contato</button>
+        <button data-open="resume" type="button"><span>PDF</span> Currículo</button>
+        <div class="start-divider"></div>
+        <button data-open="readme" type="button"><span>?</span> Ajuda</button>
+      </div>
+    </nav>
+
+    <footer class="taskbar">
+      <button class="start-button" id="start-button" type="button" aria-expanded="false">
+        <span class="start-logo">WR</span><strong>iniciar</strong>
+      </button>
+      <div class="task-divider"></div>
+      <div class="task-buttons" id="task-buttons"></div>
+      <div class="system-tray">
+        <span class="connection-dot" title="Online"></span>
+        <time id="clock">00:00</time>
+      </div>
+    </footer>
+  </main>
+
+  <div class="image-lightbox" id="image-lightbox" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Visualizador de foto do evento">
+    <button class="lightbox-close" type="button" aria-label="Fechar foto ampliada">×</button>
+    <figure>
+      <img src="" alt="">
+      <figcaption></figcaption>
+    </figure>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
