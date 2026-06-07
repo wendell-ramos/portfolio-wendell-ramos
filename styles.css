@@ -590,6 +590,7 @@ h1 strong {
 
 .terminal-card {
   overflow: hidden;
+  width: min(360px, 100%);
   color: #eaf7f5;
   background: #11183b;
   border: 2px solid #101010;
@@ -1556,10 +1557,10 @@ h1 strong {
   position: absolute;
   z-index: 1000;
   bottom: 46px;
-  left: 3px;
+  left: 4px;
   display: none;
-  width: 320px;
-  min-height: 380px;
+  width: min(340px, calc(100% - 8px));
+  min-height: 0;
   background: #d5d4ca;
   border: 2px solid white;
   border-right-color: #242424;
@@ -1573,12 +1574,14 @@ h1 strong {
 
 .start-menu-side {
   display: flex;
-  width: 43px;
-  padding: 11px 8px;
+  width: 40px;
+  padding: 10px 7px;
   align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
   color: rgba(255,255,255,.65);
   background: var(--navy);
-  font-size: 17px;
+  font-size: 14px;
   font-weight: 300;
   letter-spacing: 1px;
   text-transform: uppercase;
@@ -1586,9 +1589,17 @@ h1 strong {
   transform: rotate(180deg);
 }
 
+.start-menu-side > span {
+  color: white;
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: 0;
+}
+
 .start-menu-side strong {
   color: white;
-  font-size: 12px;
+  font-size: 9px;
+  letter-spacing: 1px;
 }
 
 .start-menu-items {
@@ -1631,9 +1642,11 @@ h1 strong {
 .start-menu-items button {
   display: flex;
   width: 100%;
-  padding: 11px 10px;
+  min-height: 48px;
+  padding: 8px 10px;
   align-items: center;
-  gap: 12px;
+  gap: 11px;
+  font-size: 16px;
   text-align: left;
   background: transparent;
   border: 0;
@@ -1645,14 +1658,70 @@ h1 strong {
   background: var(--blue);
 }
 
-.start-menu-items button span {
+.start-menu-items button .menu-icon {
+  position: relative;
   display: grid;
-  width: 27px;
-  height: 27px;
+  width: 30px;
+  height: 30px;
   place-items: center;
   color: var(--navy);
+  flex: 0 0 30px;
+  overflow: hidden;
+  font: 700 12px "IBM Plex Mono", monospace;
   background: var(--cyan);
   border: 1px solid var(--ink);
+}
+
+.menu-icon-folder::before {
+  content: "";
+  position: absolute;
+  left: 6px;
+  bottom: 7px;
+  width: 18px;
+  height: 13px;
+  background: #172255;
+  box-shadow: 0 -5px 0 -2px #172255;
+}
+
+.menu-icon-folder::after {
+  content: "";
+  position: absolute;
+  top: 8px;
+  left: 6px;
+  width: 10px;
+  height: 4px;
+  background: #172255;
+}
+
+.menu-icon-skill::before {
+  content: "";
+  width: 11px;
+  height: 11px;
+  background: var(--navy);
+  transform: rotate(45deg);
+}
+
+.menu-icon-pdf {
+  align-items: end;
+  padding-bottom: 4px;
+  color: white !important;
+  background: #d94242 !important;
+}
+
+.menu-icon-pdf::after {
+  content: "";
+  position: absolute;
+  top: -1px;
+  right: -1px;
+  border-top: 9px solid #f4b4b4;
+  border-left: 9px solid transparent;
+}
+
+.menu-icon-info,
+.menu-icon-calendar,
+.menu-icon-mail,
+.menu-icon-help {
+  background: #5ee0ff;
 }
 
 .start-divider {
@@ -1770,26 +1839,34 @@ h1 strong {
     right: 0;
     bottom: auto;
     left: 0;
-    display: flex;
+    display: grid;
     width: 100%;
-    height: 96px;
-    padding: 8px 10px 6px;
-    gap: 6px;
-    overflow-x: auto;
-    overflow-y: hidden;
-    scrollbar-width: thin;
+    height: 112px;
+    padding: 7px 8px 5px;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-rows: repeat(2, 49px);
+    grid-auto-flow: row;
+    gap: 3px 4px;
+    overflow: hidden;
   }
 
   .desktop-icon {
-    width: 68px;
-    min-width: 68px;
-    min-height: 76px;
-    padding: 3px;
+    width: auto;
+    min-width: 0;
+    min-height: 49px;
+    padding: 1px 2px;
     font-size: 10px;
+    gap: 1px;
   }
 
   .desktop-icon > span:last-child {
-    font-size: 10px;
+    font-size: 8px;
+    line-height: 1;
+  }
+
+  .icon-art {
+    transform: scale(.72);
+    transform-origin: center bottom;
   }
 
   .welcome-window,
@@ -1797,33 +1874,33 @@ h1 strong {
   .projects-window,
   .contact-window,
   .notepad-window {
-    top: 100px;
-    left: 8px;
-    width: calc(100% - 16px);
-    max-height: calc(100% - 151px);
+    top: 116px;
+    left: 6px;
+    width: calc(100% - 12px);
+    max-height: calc(100% - 165px);
     min-width: 0;
   }
 
   .resume-window {
-    top: 100px;
-    left: 8px;
-    width: calc(100% - 16px);
-    height: calc(100% - 151px);
+    top: 116px;
+    left: 6px;
+    width: calc(100% - 12px);
+    height: calc(100% - 165px);
     max-height: none;
     min-width: 0;
   }
 
   .events-window {
-    top: 100px;
-    left: 8px;
-    width: calc(100% - 16px);
-    height: calc(100% - 151px);
+    top: 116px;
+    left: 6px;
+    width: calc(100% - 12px);
+    height: calc(100% - 165px);
     max-height: none;
     min-width: 0;
   }
 
   .events-content {
-    padding: 25px 22px 38px;
+    padding: 22px 18px 34px;
   }
 
   .timeline-card {
@@ -1836,7 +1913,7 @@ h1 strong {
 
   .welcome-content {
     min-height: 0;
-    padding: 28px;
+    padding: 20px;
     grid-template-columns: 1fr;
   }
 
@@ -1884,7 +1961,9 @@ h1 strong {
 
 @media (max-width: 520px) {
   .desktop-icons {
-    height: 88px;
+    height: 108px;
+    padding: 6px 7px 4px;
+    grid-template-rows: repeat(2, 48px);
   }
 
   .welcome-window,
@@ -1892,18 +1971,18 @@ h1 strong {
   .projects-window,
   .contact-window,
   .notepad-window {
-    top: 92px;
-    max-height: calc(100% - 143px);
+    top: 112px;
+    max-height: calc(100% - 160px);
   }
 
   .resume-window {
-    top: 92px;
-    height: calc(100% - 143px);
+    top: 112px;
+    height: calc(100% - 160px);
   }
 
   .events-window {
-    top: 92px;
-    height: calc(100% - 143px);
+    top: 112px;
+    height: calc(100% - 160px);
   }
 
   .timeline-card {
@@ -1922,17 +2001,56 @@ h1 strong {
   }
 
   .welcome-content {
-    padding: 24px 20px;
+    padding: 15px 14px;
   }
 
   h1 {
-    font-size: clamp(29px, 10vw, 36px);
-    letter-spacing: -2px;
+    font-size: clamp(24px, 8.8vw, 32px);
+    letter-spacing: -1.6px;
+    line-height: 1.02;
+  }
+
+  .window-titlebar {
+    min-height: 29px;
+    padding: 3px;
+  }
+
+  .window-title {
+    font-size: 11px;
+  }
+
+  .window-controls button {
+    width: 23px;
+    height: 22px;
+    font-size: 14px;
+  }
+
+  .window-menu {
+    padding: 4px 8px;
+    gap: 12px;
+    font-size: 11px;
+  }
+
+  .welcome-copy > p:not(.eyebrow) {
+    font-size: 12px;
+    line-height: 1.45;
+  }
+
+  .eyebrow {
+    margin-bottom: 8px;
+    font-size: 9px;
   }
 
   .welcome-actions {
     align-items: stretch;
     flex-direction: column;
+    gap: 7px;
+    margin-top: 15px;
+  }
+
+  .retro-button {
+    padding: 9px 12px;
+    font-size: 12px;
   }
 
   .about-content,
@@ -1956,9 +2074,92 @@ h1 strong {
   }
 
   .start-menu {
-    width: calc(100% - 6px);
-    max-height: calc(100% - 50px);
+    width: min(278px, calc(100% - 24px));
+    max-height: calc(100% - 78px);
+    overflow-x: hidden;
     overflow-y: auto;
+  }
+
+  .start-profile {
+    padding: 7px 9px;
+    gap: 8px;
+  }
+
+  .start-profile > span {
+    width: 34px;
+    height: 34px;
+    font-size: 14px;
+  }
+
+  .start-profile strong {
+    font-size: 13px;
+  }
+
+  .start-profile small {
+    font-size: 9px;
+  }
+
+  .start-menu-side {
+    width: 26px;
+    padding-inline: 5px;
+    gap: 8px;
+    font-size: 10px;
+    letter-spacing: .5px;
+  }
+
+  .start-menu-side > span {
+    font-size: 14px;
+  }
+
+  .start-menu-side strong {
+    display: inline;
+    font-size: 7px;
+  }
+
+  .start-menu-items {
+    min-width: 0;
+    padding: 5px;
+  }
+
+  .start-menu-items button {
+    min-height: 34px;
+    padding: 4px 7px;
+    gap: 8px;
+    font-size: 12px;
+  }
+
+  .start-menu-items button .menu-icon {
+    width: 22px;
+    height: 22px;
+    flex-basis: 22px;
+    font-size: 9px;
+  }
+
+  .menu-icon-folder::before {
+    left: 5px;
+    bottom: 5px;
+    width: 13px;
+    height: 10px;
+  }
+
+  .menu-icon-folder::after {
+    top: 6px;
+    left: 5px;
+    width: 8px;
+    height: 3px;
+  }
+
+  .menu-icon-skill::before {
+    width: 8px;
+    height: 8px;
+  }
+
+  .menu-icon-pdf {
+    padding-bottom: 3px;
+  }
+
+  .start-divider {
+    margin: 4px 7px;
   }
 
   .start-button {
@@ -1990,9 +2191,23 @@ h1 strong {
 }
 
 @media (max-width: 380px) {
+  .desktop-icons {
+    height: 112px;
+    grid-template-rows: repeat(2, 51px);
+    padding-inline: 5px;
+    gap: 2px;
+  }
+
   .desktop-icon {
-    width: 62px;
-    min-width: 62px;
+    min-height: 50px;
+  }
+
+  .icon-art {
+    transform: scale(.7);
+  }
+
+  .desktop-icon > span:last-child {
+    font-size: 8px;
   }
 
   .window-title {
@@ -2013,7 +2228,22 @@ h1 strong {
   .skills-content,
   .contact-content,
   .events-content {
-    padding: 18px 15px;
+    padding: 14px 12px;
+  }
+
+  .welcome-window,
+  .content-window,
+  .projects-window,
+  .contact-window,
+  .notepad-window {
+    top: 116px;
+    max-height: calc(100% - 164px);
+  }
+
+  .resume-window,
+  .events-window {
+    top: 116px;
+    height: calc(100% - 164px);
   }
 
   .projects-content {
@@ -2076,14 +2306,57 @@ h1 strong {
     max-height: calc(100% - 59px);
   }
 
+  .welcome-window {
+    height: calc(100% - 67px);
+  }
+
   .events-window,
   .resume-window {
     height: calc(100% - 59px);
   }
 
   .welcome-content {
+    flex: 1;
     min-height: 0;
-    padding-block: 30px;
+    padding: 18px 32px;
+    grid-template-columns: 1fr minmax(350px, .9fr);
+    gap: 18px;
+    align-items: center;
+    overflow: hidden;
+  }
+
+  h1 {
+    margin-bottom: 10px;
+    font-size: clamp(32px, 3.8vw, 44px);
+    line-height: .96;
+  }
+
+  .welcome-copy > p:not(.eyebrow) {
+    max-width: 410px;
+    font-size: 12px;
+    line-height: 1.4;
+  }
+
+  .welcome-actions {
+    margin-top: 13px;
+  }
+
+  .retro-button {
+    padding: 9px 13px;
+    font-size: 12px;
+  }
+
+  .terminal-card {
+    width: min(410px, 100%);
+    transform: rotate(1deg) scale(.96);
+    transform-origin: center;
+  }
+
+  .terminal-body {
+    min-height: 152px;
+    padding: 16px 15px;
+    font-size: 10px;
+    line-height: 1.65;
   }
 }
 
