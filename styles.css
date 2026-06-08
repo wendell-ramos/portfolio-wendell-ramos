@@ -1841,10 +1841,10 @@ h1 strong {
     left: 0;
     display: grid;
     width: 100%;
-    height: 120px;
+    height: 122px;
     padding: 8px 8px 6px;
     grid-template-columns: repeat(4, minmax(0, 1fr));
-    grid-template-rows: repeat(2, 52px);
+    grid-template-rows: repeat(2, 53px);
     grid-auto-flow: row;
     gap: 4px;
     overflow: hidden;
@@ -1853,22 +1853,29 @@ h1 strong {
   .desktop-icon {
     width: auto;
     min-width: 0;
-    min-height: 52px;
-    padding: 2px;
+    min-height: 53px;
+    padding: 3px 2px;
     font-size: 10px;
-    gap: 3px;
+    gap: 2px;
     justify-content: flex-start;
   }
 
   .desktop-icon > span:last-child {
+    display: block;
+    margin-top: 0;
     font-size: 8px;
     line-height: 1.08;
   }
 
   .icon-art {
-    flex: 0 0 30px;
+    flex: 0 0 31px;
     transform: scale(.66);
-    transform-origin: center bottom;
+    transform-origin: center top;
+  }
+
+  .computer-icon {
+    margin-bottom: 5px;
+    transform: scale(.6);
   }
 
   .welcome-window,
@@ -1876,27 +1883,27 @@ h1 strong {
   .projects-window,
   .contact-window,
   .notepad-window {
-    top: 124px;
+    top: 126px;
     left: 6px;
     width: calc(100% - 12px);
-    max-height: calc(100% - 181px);
+    max-height: calc(100% - 183px);
     min-width: 0;
   }
 
   .resume-window {
-    top: 124px;
+    top: 126px;
     left: 6px;
     width: calc(100% - 12px);
-    height: calc(100% - 181px);
+    height: calc(100% - 183px);
     max-height: none;
     min-width: 0;
   }
 
   .events-window {
-    top: 124px;
+    top: 126px;
     left: 6px;
     width: calc(100% - 12px);
-    height: calc(100% - 181px);
+    height: calc(100% - 183px);
     max-height: none;
     min-width: 0;
   }
@@ -1963,9 +1970,9 @@ h1 strong {
 
 @media (max-width: 520px) {
   .desktop-icons {
-    height: 116px;
+    height: 118px;
     padding: 6px 7px 4px;
-    grid-template-rows: repeat(2, 52px);
+    grid-template-rows: repeat(2, 53px);
   }
 
   .welcome-window,
@@ -1973,18 +1980,18 @@ h1 strong {
   .projects-window,
   .contact-window,
   .notepad-window {
-    top: 120px;
-    max-height: calc(100% - 176px);
+    top: 122px;
+    max-height: calc(100% - 178px);
   }
 
   .resume-window {
-    top: 120px;
-    height: calc(100% - 176px);
+    top: 122px;
+    height: calc(100% - 178px);
   }
 
   .events-window {
-    top: 120px;
-    height: calc(100% - 176px);
+    top: 122px;
+    height: calc(100% - 178px);
   }
 
   .timeline-card {
@@ -2194,23 +2201,29 @@ h1 strong {
 
 @media (max-width: 380px) {
   .desktop-icons {
-    height: 118px;
-    grid-template-rows: repeat(2, 53px);
+    height: 120px;
+    grid-template-rows: repeat(2, 54px);
     padding-inline: 5px;
     gap: 2px;
   }
 
   .desktop-icon {
-    min-height: 53px;
-    gap: 2px;
+    min-height: 54px;
+    gap: 1px;
   }
 
   .icon-art {
-    flex-basis: 29px;
+    flex-basis: 31px;
     transform: scale(.62);
   }
 
+  .computer-icon {
+    margin-bottom: 5px;
+    transform: scale(.56);
+  }
+
   .desktop-icon > span:last-child {
+    margin-top: 0;
     font-size: 7.5px;
     line-height: 1.05;
   }
@@ -2241,14 +2254,14 @@ h1 strong {
   .projects-window,
   .contact-window,
   .notepad-window {
-    top: 122px;
-    max-height: calc(100% - 176px);
+    top: 124px;
+    max-height: calc(100% - 178px);
   }
 
   .resume-window,
   .events-window {
-    top: 122px;
-    height: calc(100% - 176px);
+    top: 124px;
+    height: calc(100% - 178px);
   }
 
   .projects-content {
