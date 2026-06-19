@@ -36,13 +36,13 @@ O projeto apresenta minha trajetória como estudante de **Sistemas de Informaç�
 
 ## Projetos apresentados
 
-### Sistema de Perícia Contábil
+### Edvaldo Films
 
-Sistema web para gestão de atividades de perícia contábil, com autenticação, permissões, acompanhamento de tarefas e fluxo de análise.
+Portfólio audiovisual desenvolvido para um filmmaker de João Pessoa/PB. A experiência é responsiva, orientada a vídeo e apresenta trabalhos de Reels, comerciais, lifestyle e captação aérea, com cases detalhados, filtros por categoria e domínio próprio.
 
-**Tecnologias:** C#, ASP.NET MVC, Entity Framework, PostgreSQL e Azure.
+**Tecnologias:** React, JavaScript, Vite, Cloudflare, DNS e domínio próprio.
 
-[Acessar projeto](https://projetopericiawendell-akdfcebzetfzdefz.brazilsouth-01.azurewebsites.net/Usuario/Login)
+[Acessar projeto](https://edvaldofilms.com.br/)
 
 ### FinControl
 
@@ -52,6 +52,14 @@ Sistema web de controle financeiro pessoal com dashboard, receitas, despesas, me
 
 [Acessar projeto](https://fincontrol-wendell-fgdjdzd5esd2d4fq.brazilsouth-01.azurewebsites.net/)
 
+### Sistema de Perícia Contábil
+
+Sistema web para gestão de atividades de perícia contábil, com autenticação, permissões, acompanhamento de tarefas e fluxo de análise.
+
+**Tecnologias:** C#, ASP.NET MVC, Entity Framework, PostgreSQL e Azure.
+
+[Acessar projeto](https://projetopericiawendell-akdfcebzetfzdefz.brazilsouth-01.azurewebsites.net/Usuario/Login)
+
 ### Gerenciador Escolar
 
 Aplicação desktop para cadastro de alunos e professores, lançamento e visualização de notas e integração com banco de dados.
@@ -59,6 +67,13 @@ Aplicação desktop para cadastro de alunos e professores, lançamento e visuali
 **Tecnologias:** C#, WPF e SQL Server.
 
 [Acessar repositório](https://github.com/wendell-ramos/GerenciadorEscolar)
+
+## Competências apresentadas
+
+- **Front-end:** HTML, CSS, JavaScript, React e Vite
+- **Back-end e aplicações:** Node.js, C#, ASP.NET MVC, WPF, Python e Entity Framework
+- **Dados e infraestrutura:** PostgreSQL, SQL Server, Supabase, Azure, Cloudflare, DNS e domínios próprios
+- **Ferramentas:** Git, GitHub, Excel e VBA
 
 ## Eventos e experiências
 
@@ -91,6 +106,7 @@ portfolio-wendell-ramos/
 │   ├── evento-gdg-lightning-talks-2026.jpeg
 │   ├── evento-hackathon-fatec-2026.jpeg
 │   ├── evento-visita-cobmais-2024.jpeg
+│   ├── projeto-edvaldo-films.png
 │   └── wendell-perfil.png
 ├── index.html
 ├── script.js
@@ -103,7 +119,7 @@ portfolio-wendell-ramos/
 A interface foi adaptada para diferentes dimensões:
 
 - Em desktops, os atalhos são distribuídos de acordo com a altura disponível.
-- Em telas menores, os atalhos ficam em uma faixa horizontal rolável.
+- Em telas menores, os atalhos são organizados em duas linhas para evitar rolagem horizontal.
 - As janelas respeitam a área útil acima da barra de tarefas.
 - Projetos, eventos e contatos são reorganizados para leitura em celulares.
 

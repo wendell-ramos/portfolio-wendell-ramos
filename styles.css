@@ -806,7 +806,7 @@ h1 strong {
 .projects-content {
   display: grid;
   padding: 20px;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 16px;
 }
 
@@ -847,6 +847,41 @@ h1 strong {
 .preview-one { background: #0d1424; }
 .preview-two { background: linear-gradient(135deg, #dff8ee, #f8fffc); }
 .preview-three { background: linear-gradient(145deg, #d6e4f2, #82a8cf); }
+.preview-four { background: #080b09; }
+
+.cover-edvaldo-shot {
+  position: absolute;
+  z-index: 1;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  filter: saturate(.9) contrast(1.06) brightness(.82);
+}
+
+.preview-four::before {
+  z-index: 2;
+  background:
+    linear-gradient(90deg, rgba(5, 8, 6, .2), transparent 60%),
+    linear-gradient(rgba(196, 255, 62, .08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(196, 255, 62, .08) 1px, transparent 1px);
+  background-size: auto, 14px 14px, 14px 14px;
+}
+
+.cover-client-badge {
+  position: absolute;
+  z-index: 3;
+  top: 9px;
+  left: 9px;
+  padding: 5px 7px;
+  color: #10140d;
+  font: 700 8px "IBM Plex Mono", monospace;
+  letter-spacing: .8px;
+  background: #c8ff3d;
+  border: 1px solid #10140d;
+}
 
 .cover-number {
   position: absolute;
@@ -860,6 +895,11 @@ h1 strong {
 .preview-two .cover-number,
 .preview-three .cover-number {
   color: rgba(18, 45, 48, .55);
+}
+
+.preview-four .cover-number {
+  color: #c8ff3d;
+  text-shadow: 1px 1px #050805;
 }
 
 .cover-window {
