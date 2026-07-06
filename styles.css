@@ -806,7 +806,7 @@ h1 strong {
 .projects-content {
   display: grid;
   padding: 20px;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 16px;
 }
 
@@ -1104,6 +1104,17 @@ h1 strong {
   color: var(--blue);
   font: 600 11px "IBM Plex Mono", monospace;
   text-decoration: none;
+}
+
+.project-status {
+  margin-top: auto;
+  width: fit-content;
+  padding: 5px 8px;
+  color: #5a5d66;
+  font: 600 10px "IBM Plex Mono", monospace;
+  background: #f0efe8;
+  border: 1px solid #c7c3b8;
+  box-shadow: inset -1px -1px 0 #fff, inset 1px 1px 0 #9a968c;
 }
 
 .skills-content {
